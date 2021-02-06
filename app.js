@@ -11,10 +11,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/admin',adminRouter);
-
 app.use(userRouter)
 app.use((req, res)=>{
     res.render('error/404',{pageName:"MyPassword",pageTitle:"404 Error Page"})
 })
 
-app.listen(3000);
+app.listen(80);
